@@ -10,9 +10,4 @@ class LocalStorageService {
     var shared = await SharedPreferences.getInstance();
     return await shared.setStringList(key, value);
   }
-
-  Future<bool> clearAllTransactions(String key) async {
-    var shared = await SharedPreferences.getInstance();
-    return await shared.remove(key);
-  }
 }
